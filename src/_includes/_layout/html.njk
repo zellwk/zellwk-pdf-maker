@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {%- include "_head/head.njk" %}
+  </head>
+
+  <body class="{{bodyClass}}">
+    <main>
+      {{- content | safe -}}
+    </main>
+
+    {% if footer %}
+      {% include "_partials/footer.njk" %}
+    {% endif %}
+
+    <script module src="/js/main.mjs"></script>
+  </body>
+</html>

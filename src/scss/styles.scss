@@ -1,0 +1,172 @@
+@import "normalize.css/normalize";
+@import "base/reset";
+@import "_prism";
+
+@mixin wrap-words {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+// Base
+html {
+  // height: 100%;
+}
+
+body {
+  border-top: 0.5rem solid #fd256e;
+}
+
+main {
+  // flex-grow: 1;
+  width: 35rem;
+  max-width: 35rem;
+  margin: 4rem auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+// ========================
+// Typography
+// ========================
+html {
+  // 30px works better as a default font size for PDFs
+  font-size: 20px;
+  font-family: "FreightSans Pro", "freight-sans-pro", cursive;
+  line-height: 1.4;
+}
+
+h1 {
+  font-size: #{1rem * 1.2 * 1.2 * 1.2 * 1.2 * 1.2 * 1.2 * 1.2};
+  font-family: "FreightDisp Pro", "freight-display-pro", cursive;
+  font-weight: 700;
+  line-height: 1;
+}
+
+h2 {
+  font-size: #{1rem * 1.2 * 1.2 * 1.2 * 1.2};
+  font-family: "FreightText Pro", "freight-text-pro", cursive;
+  line-height: 1.15;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: #{1rem * 1.2};
+  font-family: "FreightSansCmpPro", "freight-sans-condensed-pro", cursive;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 0.005rem;
+  font-feature-settings: "liga" 1, "smcp" 1;
+  color: #fd256e;
+}
+
+strong {
+  font-weight: 600;
+}
+
+em {
+  font-size: italic;
+}
+
+code {
+  font-size: #{1rem / 1.2 / 1.2};
+  font-family: Fira Code, cursive;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+// Other stuff
+.site-footer {
+  background-color: #fafafa;
+  border-top: 0.25rem solid #fd256e;
+  padding: 1rem;
+}
+
+// Styles for long-form text
+.longform {
+  > *:not(h1) {
+    max-width: 29rem;
+  }
+
+  > * + * {
+    margin-top: 1rem;
+  }
+
+  h2 {
+    margin-top: 2rem;
+  }
+
+  h3 {
+    margin-top: 2rem;
+  }
+
+  h3 + * {
+    margin-top: 0.5rem;
+  }
+
+  ul {
+    list-style: disc;
+  }
+
+  ol {
+    list-style: decimal;
+  }
+
+  li {
+    list-style-position: outside;
+    margin-left: 2rem;
+  }
+
+  li + li {
+    margin-top: 0.125rem;
+  }
+
+  figure img {
+    border: 1px solid #ddd;
+  }
+}
+
+// Code
+code {
+  display: inline-block;
+  font-size: #{1rem / 1.2 / 1.2};
+  font-family: Fira Code, monospace;
+  font-weight: 400;
+  line-height: 1.4;
+  margin: 0 0.25rem;
+  padding: 0 0.5rem;
+  border: 1px solid #ccc;
+  background-color: #fafafa;
+  color: #333;
+}
+
+pre {
+  code {
+    display: block;
+    margin: 0;
+    padding: 1em 1rem;
+    border: 0;
+    background-color: transparent;
+    @include wrap-words;
+    white-space: pre-wrap;
+  }
+}
+
+// ========================
+// Zell Logo
+// ========================
+.zell {
+  display: inline-block;
+  margin-bottom: 2rem;
+  > svg {
+    height: 2rem;
+  }
+
+  .o-zell__bar {
+    fill: #fd256e;
+  }
+  .o-zell__text {
+    fill: #333;
+  }
+}

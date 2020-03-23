@@ -1,0 +1,11 @@
+{
+  "title": "Site Title",
+  "url": "https://zellwk.com",
+  "description": "Site Description",
+  "author": {
+    "name": "Zell Liew",
+    "twitter": "@zellwk",
+    "email": "zellwk@gmail.com",
+    "url": "https://zellwk.com/"
+  }
+}

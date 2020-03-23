@@ -1,0 +1,17 @@
+---
+layout: _layout/html
+permalink: /{{ page.inputPath | pagePathOverride }}/
+nav: true
+footer: true
+---
+<div class="l-wrap">
+  <article class="o-words generic-layout">
+    {{- content | safe -}}
+
+    {%- if newsletter -%}
+      <section class="o-content c-ck ck-layout jsCkForm">
+        {%- include 'convertkit.njk' -%}
+      </section>
+    {%- endif -%}
+  </article>
+</div>

@@ -1,0 +1,13 @@
+---
+layout: _layout/html
+permalink: /post/{{ slug }}/index.html
+nav: true
+footer: true
+---
+<article class="longform">
+  {%- markdown %}
+  # {{title}}
+  {%- endmarkdown %}
+
+  {{- content | safe -}}
+</article>

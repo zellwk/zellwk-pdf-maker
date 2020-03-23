@@ -1,0 +1,17 @@
+# osx noise
+.DS_Store
+profile
+
+#ignore packages
+node_modules
+
+#ignore logs
+*.log
+
+#ignore generated files
+dist
+pdf
+_tmp
+
+# For Ulysses
+*.plist

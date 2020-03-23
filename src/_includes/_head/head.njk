@@ -1,0 +1,17 @@
+{%- include "_head/meta.njk" -%}
+{%- include "_head/favicon.njk" -%}
+
+{# CSS #}
+{%- if env.isDev -%}
+  <link rel="stylesheet" href="/css/styles.css">
+{%- else %}
+  <link rel="stylesheet" href="/{{rev.stylesMin or rev.styles}}">
+{%- endif -%}
+
+{# Remove `.no-js` class #}
+<script>
+  document
+    .documentElement
+    .classList
+    .remove('no-js');
+</script>
